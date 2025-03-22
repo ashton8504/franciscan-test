@@ -380,28 +380,45 @@ input {
    ==================================================== */
 
 @media (max-width: 480px) {
+  /* Hero heading smaller for mobile */
   .standard-hero h1 {
     font-size: 1.5rem;
   }
 
   .standard-hero .btn-row {
-    margin: 1.5em 1em;
-  }
-  .standard-hero .btn-row .root-lowercase-btn {
-    margin-right: 10px;
-    padding: 0.6em 1.4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    margin: 1.5em auto;
   }
 
+  .standard-hero .btn-row .root-lowercase-btn {
+    margin: 0;
+    padding: 0.8em 2em;
+  }
+
+  /* Nav link size/padding & ensure horizontal scroll on smaller screens */
+  #nav-links {
+    -webkit-overflow-scrolling: touch;
+  }
+  .page-menu {
+    display: inline-flex;
+    white-space: nowrap;
+  }
   .page-menu a {
     font-size: 16px;
     padding: 0.3rem;
   }
 
+  /* Single-column footer images */
   .footer-images {
     grid-template-columns: 1fr;
     gap: 0.5em;
   }
 
+  /* Stack the info-section columns */
   .info-section {
     flex-direction: column;
     gap: 2em;
@@ -409,31 +426,29 @@ input {
     margin: 2em auto;
     padding-top: 1em;
   }
-
   .info-text {
     border-left: none;
     margin-right: 0;
     max-width: 100%;
     padding: 0 1em;
   }
-
   .info-form {
-    order: -1;
+    order: -1; /* Form above text */
     margin: 0 auto;
     max-width: 500px;
     width: 100%;
     margin-top: 0;
   }
 
+  /* Adjust banner paragraph */
   .banner-paragraph p {
     max-width: 90%;
     font-size: 20px;
   }
 
-  /* Updated submit button styling: align left instead of full width */
+  /* Info form: smaller button or full width, whichever you prefer */
   .info-form button.form-btn {
     width: auto;
     align-self: flex-start;
-    /* Optionally, you could set a fixed width if needed: e.g., width: 35%; */
   }
 }
