@@ -430,7 +430,10 @@ input {
     font-size: 20px;
   }
 
+  /* Updated submit button styling: align left instead of full width */
   .info-form button.form-btn {
-    width: 100%;
+    width: auto;
+    align-self: flex-start;
+    /* Optionally, you could set a fixed width if needed: e.g., width: 35%; */
   }
 }
