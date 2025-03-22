@@ -1,0 +1,436 @@
+/* ====================================================
+   1. GLOBAL STYLES & RESET
+   ==================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ====================================================
+      2. HERO SECTION
+      ==================================================== */
+.standard-hero {
+  background-image: url("imgs/ssd-hero.jpg");
+  min-height: 40vh;
+  background-size: cover;
+  background-color: #e7e7e7;
+  background-position: center;
+  background-position-y: 48%;
+}
+
+.standard-hero-gradient {
+  width: 100%;
+  height: 100%;
+  min-height: 40vh;
+  background: linear-gradient(
+    180deg,
+    rgba(102, 102, 102, 0.55) 0%,
+    rgba(0, 0, 0, 0.55) 55%
+  );
+  display: flex;
+  /* fallback for older browsers: */
+  display: -ms-flexbox;
+}
+
+.standard-hero h1 {
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  font-size: 2.5em;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.hero-divider {
+  border: 0;
+  height: 1px;
+  background-color: #fff;
+  width: 55%;
+  margin: 0.5em auto;
+}
+
+.standard-hero .btn-row {
+  text-align: center;
+  margin: 2em;
+}
+
+.standard-hero .btn-row .root-lowercase-btn {
+  background-color: transparent;
+  color: #fff;
+  border-color: #fff;
+  display: inline-block;
+  margin-right: 50px;
+  padding: 0.8em 3.4em;
+  margin-bottom: 0;
+}
+
+.standard-hero .btn-row .root-lowercase-btn:hover {
+  color: #fff;
+  background-color: var(--fran-blue);
+  border-color: var(--fran-blue);
+}
+
+/* ====================================================
+      3. NAVIGATION STYLES
+      ==================================================== */
+#nav-links {
+  overflow-x: auto;
+  white-space: nowrap;
+  background-color: #07647d;
+  padding: 1.2em 2rem;
+  width: 100%;
+}
+
+.page-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+.page-menu li {
+  border-right: 1px solid #fff;
+  padding: 0 1.2em;
+  margin: 0;
+  display: inline-flex;
+}
+
+.page-menu li:last-child {
+  border-right: none;
+}
+
+.page-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 19px;
+  padding: 0.5rem;
+}
+
+.page-menu a:hover {
+  color: #f5af50;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* ====================================================
+      4. FORM STYLES (General)
+      ==================================================== */
+form {
+  max-width: 400px;
+  margin: 2em auto;
+}
+
+form label,
+form input {
+  display: block;
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+input {
+  padding: 0.5em;
+  font-size: 1rem;
+}
+
+/* Hidden fields styling */
+.hidden-fields {
+  display: none;
+}
+
+.hidden-fields.visible {
+  display: block;
+}
+
+/* ====================================================
+      5. BUTTON STYLES (Franciscan)
+      ==================================================== */
+.root-lowercase-btn {
+  border: 1px solid transparent;
+  background-color: var(--root-lowercase-btn-background-color, #998643);
+  color: var(--root-lowercase-btn-color, #fff);
+  border-color: var(--root-lowercase-btn-border-color, transparent);
+  border-radius: 25px;
+  padding: 0.5em 0.8em;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  width: fit-content;
+  margin: auto;
+  transition: 0.2s ease-in-out;
+}
+
+.root-lowercase-btn:hover {
+  background-color: var(--far-gen-btn-background-color-hover, #998643);
+  color: var(--far-gen-btn-color-hover, #fff);
+  border-color: var(--far-gen-btn-border-color-hover, transparent);
+}
+
+.hero-btn {
+  --hero-btn-background-hover: #06647d;
+  font-weight: bold;
+}
+
+.standard-hero .btn-row .root-lowercase-btn.hero-btn:hover {
+  background-color: #06647d;
+  color: #fff;
+  border-color: #06647d;
+}
+
+/* ====================================================
+      6. LAYOUT & CONTENT PADDING
+      ==================================================== */
+.site-para-box {
+  width: 75%;
+  margin: auto;
+}
+
+.site-content-box {
+  width: 85%;
+  margin: auto;
+}
+
+@media only screen and (max-width: 500px) {
+  .site-para-box,
+  .site-content-box {
+    width: 90%;
+    padding: 0 1em;
+  }
+}
+
+/* ====================================================
+      7. BANNER SECTION (Gold Heading + White Paragraph)
+      ==================================================== */
+.banner-heading {
+  background-color: #f5af50;
+  color: #000;
+  text-align: center;
+  padding: 3em 0;
+}
+
+.banner-heading h2 {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+}
+
+.banner-paragraph {
+  background-color: #fff;
+  color: #000;
+  text-align: left;
+  padding: 4em 0;
+}
+
+.banner-paragraph p {
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
+  line-height: 1.6;
+  padding-top: 30px;
+  max-width: 80%;
+  margin: 0 auto 2em;
+}
+
+/* ====================================================
+      8. INFO SECTION (Side-by-Side Layout)
+      ==================================================== */
+.info-section {
+  display: flex;
+  gap: 5em;
+  max-width: 1200px;
+  margin: 2em auto;
+  align-items: flex-start;
+  padding-top: 50px;
+}
+
+.info-text {
+  flex: 2;
+  color: #2b2b2b;
+  border-left: 3px solid #f5af50;
+  padding-left: 2.5em;
+  margin-right: 2em;
+  max-width: 45%;
+}
+
+.info-text h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.8rem;
+  color: #06647d;
+  margin-bottom: 0.75em;
+}
+
+.info-text p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5em;
+}
+
+.info-form {
+  flex: 1;
+  background-color: #06647d;
+  padding: 2em 1em;
+  border-radius: 8px;
+  margin-top: 30px;
+  color: #fff;
+}
+
+.info-form h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4rem;
+  margin: 0 0 1em;
+  text-align: center;
+  color: #f5af50;
+}
+
+.info-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-form label {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  color: #fff;
+}
+
+.info-form input {
+  margin-bottom: 1em;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: 0.6em;
+  font-size: 1rem;
+  color: #000;
+}
+
+.info-form button.form-btn {
+  background-color: #f5af50;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  padding: 0.8em 2.9em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  margin-top: 1.5em;
+  width: 35%;
+}
+
+.info-form button.form-btn:hover {
+  background-color: #e39e44;
+}
+
+/* ====================================================
+      9. FOOTER STYLES (Images Only)
+      ==================================================== */
+#footer-section {
+  margin-top: auto;
+  width: 100%;
+  padding: 0;
+  text-align: center;
+}
+
+.footer-images {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.3em;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-image {
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+
+.footer-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.footer-image.last-img {
+  aspect-ratio: 3 / 4;
+}
+
+.footer-image.last-img img {
+  object-position: 50% 20%;
+}
+
+/* ====================================================
+      10. RESPONSIVE ADJUSTMENTS
+   ==================================================== */
+
+@media (max-width: 480px) {
+  .standard-hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .standard-hero .btn-row {
+    margin: 1.5em 1em;
+  }
+  .standard-hero .btn-row .root-lowercase-btn {
+    margin-right: 10px;
+    padding: 0.6em 1.4em;
+  }
+
+  .page-menu a {
+    font-size: 16px;
+    padding: 0.3rem;
+  }
+
+  .footer-images {
+    grid-template-columns: 1fr;
+    gap: 0.5em;
+  }
+
+  .info-section {
+    flex-direction: column;
+    gap: 2em;
+    width: 90%;
+    margin: 2em auto;
+    padding-top: 1em;
+  }
+
+  .info-text {
+    border-left: none;
+    margin-right: 0;
+    max-width: 100%;
+    padding: 0 1em;
+  }
+
+  .info-form {
+    order: -1;
+    margin: 0 auto;
+    max-width: 500px;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .banner-paragraph p {
+    max-width: 90%;
+    font-size: 20px;
+  }
+
+  .info-form button.form-btn {
+    width: 100%;
+  }
+}

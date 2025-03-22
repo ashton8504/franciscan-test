@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Franciscan Test</title>
+
+    <!-- Preconnect to improve performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Link to Montserrat and Roboto fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- External stylesheet link -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- External JavaScript file -->
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <!-- Hero Section -->
+    <section id="hero-section" class="standard-hero">
+      <div class="standard-hero-gradient">
+        <div class="site-content-box">
+          <h1>School of Spiritual Direction</h1>
+          <hr class="hero-divider" />
+          <div class="btn-row">
+            <a
+              href="https://encounter.franciscan.edu/portal/enrollment-landing"
+              class="root-lowercase-btn hero-btn"
+              target="_blank"
+              >Apply Now</a
+            >
+            <a
+              href="https://franciscan.edu/inquire/"
+              class="root-lowercase-btn hero-btn"
+              target="_blank"
+              >Get Information</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Horizontal Navigation Links -->
+    <nav id="nav-links">
+      <ul class="page-menu">
+        <li><a href="#">The Need</a></li>
+        <li><a href="#">Why Franciscan</a></li>
+        <li><a href="#">The Program</a></li>
+        <li><a href="#">FAQs</a></li>
+      </ul>
+    </nav>
+
+    <section id="info-section" class="info-section">
+      <!-- Left Column: Text -->
+      <div class="info-text">
+        <h2>Do You Feel Called to Become a Spiritual Director?</h2>
+        <p>
+          In our increasingly impersonal, technology-driven society, people long
+          for authentic connection—with one another and with Christ. While
+          spiritual direction has traditionally been offered to the ordained and
+          consecrated religious, many lay faithful now seek it to deepen their
+          relationship with God, heal from spiritual wounds, and navigate life’s
+          challenges.
+        </p>
+        <p>
+          Spiritual direction provides a sacred space where individuals can open
+          their hearts and receive accompaniment on their journey toward
+          intimacy with God. Like Jesus’ encounters with the woman at the well,
+          the blind man Bartimaeus, and the prodigal son returning to the
+          father, spiritual direction fosters transformation and ongoing
+          conversion.
+        </p>
+        <p>
+          If you feel called to accompany others on their spiritual journey,
+          becoming a certified spiritual director is a meaningful way to help
+          them grow closer to Christ.
+        </p>
+      </div>
+
+      <!-- Right Column: Gold Form Box -->
+
+      <div class="info-form">
+        <h3>Request Information</h3>
+        <form id="requestForm">
+          <div class="form-group">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first-name" />
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last-name" />
+          </div>
+          <div id="hidden-fields" class="hidden-fields">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" />
+            </div>
+          </div>
+          <button type="submit" class="form-btn">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <!--Why Choose Franciscan-->
+    <section id="banner-section">
+      <!-- Gold background for the heading -->
+      <div class="banner-heading">
+        <h2>Why Choose Franciscan University’s Spiritual Direction Program?</h2>
+      </div>
+      <!-- White background for the paragraph -->
+      <div class="banner-paragraph">
+        <p>
+          At Franciscan University, spiritual direction is more than just a
+          program—it’s a formation rooted in the Church’s rich tradition of
+          prayer and discernment. Our approach combines theological depth,
+          practical training, and personal transformation to prepare you for the
+          sacred work of accompanying others in their faith journey.
+        </p>
+      </div>
+    </section>
+
+    <!--Footer Section-->
+    <footer id="footer-section">
+      <div class="footer-content">
+        <div class="footer-images">
+          <div class="footer-image">
+            <img
+              src="imgs/ssd-img-grid-1.jpg"
+              alt="Students Taking a class and studying"
+            />
+          </div>
+          <div class="footer-image">
+            <img src="imgs/ssd-img-grid-2.jpg" alt="People in a Church" />
+          </div>
+          <div class="footer-image">
+            <img
+              src="imgs/ssd-img-grid-3.jpg"
+              alt="Students listening to a lecture"
+            />
+          </div>
+          <div class="footer-image">
+            <img
+              class="last-img"
+              src="imgs/ssd-img-grid-4.jpg"
+              alt="People praying"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
