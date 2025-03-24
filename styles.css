@@ -1,6 +1,19 @@
 /* ====================================================
-   1. GLOBAL STYLES & RESET
+   :root – Custom Properties (Variables)
    ==================================================== */
+:root {
+  --fran-blue: #06647d;
+  --gold: #f5af50;
+  --white: #fff;
+  --light-gray: #e7e7e7;
+  --dark-gray: #2b2b2b;
+  --black: #000;
+  --btn-bg: #998643;
+}
+
+/* ====================================================
+     1. GLOBAL STYLES & RESET
+     ==================================================== */
 *,
 *::before,
 *::after {
@@ -21,13 +34,13 @@ body {
 }
 
 /* ====================================================
-      2. HERO SECTION
-      ==================================================== */
+     2. HERO SECTION
+     ==================================================== */
 .standard-hero {
   background-image: url("imgs/ssd-hero.jpg");
   min-height: 40vh;
   background-size: cover;
-  background-color: #e7e7e7;
+  background-color: var(--light-gray);
   background-position: center;
   background-position-y: 48%;
 }
@@ -41,14 +54,15 @@ body {
     rgba(102, 102, 102, 0.55) 0%,
     rgba(0, 0, 0, 0.55) 55%
   );
+  /* Modern browsers */
   display: flex;
-  /* fallback for older browsers: */
+  /* Fallback for older IE */
   display: -ms-flexbox;
 }
 
 .standard-hero h1 {
   font-family: "Montserrat", sans-serif;
-  color: #fff;
+  color: var(--white);
   font-size: 2.5em;
   text-align: center;
   margin-top: auto;
@@ -58,7 +72,7 @@ body {
 .hero-divider {
   border: 0;
   height: 1px;
-  background-color: #fff;
+  background-color: var(--white);
   width: 55%;
   margin: 0.5em auto;
 }
@@ -70,8 +84,8 @@ body {
 
 .standard-hero .btn-row .root-lowercase-btn {
   background-color: transparent;
-  color: #fff;
-  border-color: #fff;
+  color: var(--white);
+  border-color: var(--white);
   display: inline-block;
   margin-right: 50px;
   padding: 0.8em 3.4em;
@@ -79,14 +93,14 @@ body {
 }
 
 .standard-hero .btn-row .root-lowercase-btn:hover {
-  color: #fff;
+  color: var(--white);
   background-color: var(--fran-blue);
   border-color: var(--fran-blue);
 }
 
 /* ====================================================
-      3. NAVIGATION STYLES
-      ==================================================== */
+     3. NAVIGATION STYLES
+     ==================================================== */
 #nav-links {
   overflow-x: auto;
   white-space: nowrap;
@@ -105,7 +119,7 @@ body {
 }
 
 .page-menu li {
-  border-right: 1px solid #fff;
+  border-right: 1px solid var(--white);
   padding: 0 1.2em;
   margin: 0;
   display: inline-flex;
@@ -116,7 +130,7 @@ body {
 }
 
 .page-menu a {
-  color: #fff;
+  color: var(--white);
   text-decoration: none;
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -130,8 +144,8 @@ body {
 }
 
 /* ====================================================
-      4. FORM STYLES (General)
-      ==================================================== */
+     4. FORM STYLES (General)
+     ==================================================== */
 form {
   max-width: 400px;
   margin: 2em auto;
@@ -159,12 +173,12 @@ input {
 }
 
 /* ====================================================
-      5. BUTTON STYLES (Franciscan)
-      ==================================================== */
+     5. BUTTON STYLES (Franciscan)
+     ==================================================== */
 .root-lowercase-btn {
   border: 1px solid transparent;
-  background-color: var(--root-lowercase-btn-background-color, #998643);
-  color: var(--root-lowercase-btn-color, #fff);
+  background-color: var(--root-lowercase-btn-background-color, var(--btn-bg));
+  color: var(--root-lowercase-btn-color, var(--white));
   border-color: var(--root-lowercase-btn-border-color, transparent);
   border-radius: 25px;
   padding: 0.5em 0.8em;
@@ -178,25 +192,25 @@ input {
 }
 
 .root-lowercase-btn:hover {
-  background-color: var(--far-gen-btn-background-color-hover, #998643);
-  color: var(--far-gen-btn-color-hover, #fff);
+  background-color: var(--far-gen-btn-background-color-hover, var(--btn-bg));
+  color: var(--far-gen-btn-color-hover, var(--white));
   border-color: var(--far-gen-btn-border-color-hover, transparent);
 }
 
 .hero-btn {
-  --hero-btn-background-hover: #06647d;
+  --hero-btn-background-hover: var(--fran-blue);
   font-weight: bold;
 }
 
 .standard-hero .btn-row .root-lowercase-btn.hero-btn:hover {
-  background-color: #06647d;
-  color: #fff;
-  border-color: #06647d;
+  background-color: var(--fran-blue);
+  color: var(--white);
+  border-color: var(--fran-blue);
 }
 
 /* ====================================================
-      6. LAYOUT & CONTENT PADDING
-      ==================================================== */
+     6. LAYOUT & CONTENT PADDING
+     ==================================================== */
 .site-para-box {
   width: 75%;
   margin: auto;
@@ -216,13 +230,14 @@ input {
 }
 
 /* ====================================================
-      7. BANNER SECTION (Gold Heading + White Paragraph)
-      ==================================================== */
+     7. BANNER SECTION (Gold Heading + White Paragraph)
+     ==================================================== */
 .banner-heading {
-  background-color: #f5af50;
-  color: #000;
+  background-color: var(--gold);
+  color: var(--black);
   text-align: center;
-  padding: 3em 0;
+  padding: 5em 0;
+  margin-top: 100px;
 }
 
 .banner-heading h2 {
@@ -232,8 +247,8 @@ input {
 }
 
 .banner-paragraph {
-  background-color: #fff;
-  color: #000;
+  background-color: var(--white);
+  color: var(--black);
   text-align: left;
   padding: 4em 0;
 }
@@ -248,8 +263,8 @@ input {
 }
 
 /* ====================================================
-      8. INFO SECTION (Side-by-Side Layout)
-      ==================================================== */
+     8. INFO SECTION (Side-by-Side Layout)
+     ==================================================== */
 .info-section {
   display: flex;
   gap: 5em;
@@ -261,8 +276,8 @@ input {
 
 .info-text {
   flex: 2;
-  color: #2b2b2b;
-  border-left: 3px solid #f5af50;
+  color: var(--dark-gray);
+  border-left: 3px solid var(--gold);
   padding-left: 2.5em;
   margin-right: 2em;
   max-width: 45%;
@@ -271,7 +286,7 @@ input {
 .info-text h2 {
   font-family: "Montserrat", sans-serif;
   font-size: 1.8rem;
-  color: #06647d;
+  color: var(--fran-blue);
   margin-bottom: 0.75em;
 }
 
@@ -284,11 +299,11 @@ input {
 
 .info-form {
   flex: 1;
-  background-color: #06647d;
+  background-color: var(--fran-blue);
   padding: 2em 1em;
   border-radius: 8px;
   margin-top: 30px;
-  color: #fff;
+  color: var(--white);
 }
 
 .info-form h3 {
@@ -296,7 +311,7 @@ input {
   font-size: 1.4rem;
   margin: 0 0 1em;
   text-align: center;
-  color: #f5af50;
+  color: var(--gold);
 }
 
 .info-form form {
@@ -307,7 +322,7 @@ input {
 .info-form label {
   font-weight: bold;
   margin-bottom: 0.5em;
-  color: #fff;
+  color: var(--white);
 }
 
 .info-form input {
@@ -316,12 +331,12 @@ input {
   border: 1px solid #ccc;
   padding: 0.6em;
   font-size: 1rem;
-  color: #000;
+  color: var(--black);
 }
 
 .info-form button.form-btn {
-  background-color: #f5af50;
-  color: #000;
+  background-color: var(--gold);
+  color: var(--black);
   border: none;
   border-radius: 4px;
   padding: 0.8em 2.9em;
@@ -337,8 +352,8 @@ input {
 }
 
 /* ====================================================
-      9. FOOTER STYLES (Images Only)
-      ==================================================== */
+     9. FOOTER STYLES (Images Only)
+     ==================================================== */
 #footer-section {
   margin-top: auto;
   width: 100%;
@@ -376,11 +391,10 @@ input {
 }
 
 /* ====================================================
-      10. RESPONSIVE ADJUSTMENTS
-   ==================================================== */
-
+     10. RESPONSIVE ADJUSTMENTS (Mobile)
+     ==================================================== */
 @media (max-width: 480px) {
-  /* Hero heading smaller for mobile */
+  /* Hero Section Adjustments */
   .standard-hero h1 {
     font-size: 1.5rem;
   }
@@ -388,8 +402,8 @@ input {
   .standard-hero .btn-row {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     gap: 1em;
     margin: 1.5em auto;
   }
@@ -399,26 +413,28 @@ input {
     padding: 0.8em 2em;
   }
 
-  /* Nav link size/padding & ensure horizontal scroll on smaller screens */
+  /* Navigation Adjustments */
   #nav-links {
     -webkit-overflow-scrolling: touch;
   }
+
   .page-menu {
     display: inline-flex;
     white-space: nowrap;
   }
+
   .page-menu a {
     font-size: 16px;
     padding: 0.3rem;
   }
 
-  /* Single-column footer images */
+  /* Footer Images: Single Column */
   .footer-images {
     grid-template-columns: 1fr;
     gap: 0.5em;
   }
 
-  /* Stack the info-section columns */
+  /* Info Section: Stack Columns and Center */
   .info-section {
     flex-direction: column;
     gap: 2em;
@@ -426,27 +442,32 @@ input {
     margin: 2em auto;
     padding-top: 1em;
   }
+
   .info-text {
     border-left: none;
     margin-right: 0;
     max-width: 100%;
     padding: 0 1em;
   }
+
   .info-form {
-    order: -1; /* Form above text */
+    order: -1;
     margin: 0 auto;
     max-width: 500px;
     width: 100%;
     margin-top: 0;
   }
 
-  /* Adjust banner paragraph */
+  .banner-heading {
+    padding: 2em 0;
+    margin-top: 1em;
+  }
+
   .banner-paragraph p {
     max-width: 90%;
     font-size: 20px;
   }
 
-  /* Info form: smaller button or full width, whichever you prefer */
   .info-form button.form-btn {
     width: auto;
     align-self: flex-start;
