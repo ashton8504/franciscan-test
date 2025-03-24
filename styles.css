@@ -394,9 +394,24 @@ input {
      10. RESPONSIVE ADJUSTMENTS (Mobile)
      ==================================================== */
 @media (max-width: 480px) {
-  /* Hero Section Adjustments */
+  .standard-hero {
+    background-position-y: 40%;
+  }
+
+  .standard-hero-gradient {
+    background: linear-gradient(
+      180deg,
+      rgba(102, 102, 102, 0.45) 0%,
+      rgba(0, 0, 0, 0.45) 55%
+    );
+  }
+
   .standard-hero h1 {
     font-size: 1.5rem;
+    margin-bottom: 0.3em;
+  }
+  .hero-divider {
+    margin: 0.3em auto;
   }
 
   .standard-hero .btn-row {
@@ -404,37 +419,33 @@ input {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1em;
-    margin: 1.5em auto;
+    gap: 0.75em;
+    margin: 1em auto;
   }
-
   .standard-hero .btn-row .root-lowercase-btn {
     margin: 0;
-    padding: 0.8em 2em;
+    padding: 0.5em 1.5em;
+    font-size: 0.95rem;
   }
 
   /* Navigation Adjustments */
   #nav-links {
     -webkit-overflow-scrolling: touch;
   }
-
   .page-menu {
     display: inline-flex;
     white-space: nowrap;
   }
-
   .page-menu a {
     font-size: 16px;
     padding: 0.3rem;
   }
 
-  /* Footer Images: Single Column */
   .footer-images {
     grid-template-columns: 1fr;
     gap: 0.5em;
   }
 
-  /* Info Section: Stack Columns and Center */
   .info-section {
     flex-direction: column;
     gap: 2em;
@@ -442,14 +453,12 @@ input {
     margin: 2em auto;
     padding-top: 1em;
   }
-
   .info-text {
     border-left: none;
     margin-right: 0;
     max-width: 100%;
     padding: 0 1em;
   }
-
   .info-form {
     order: -1;
     margin: 0 auto;
